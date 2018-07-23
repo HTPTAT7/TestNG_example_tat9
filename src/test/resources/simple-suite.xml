@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SimpleSuite">
+
+	<test name="SimpleTest">
+		<parameter name="login" value="tathtp" />
+		<parameter name="pass" value="Klopik123" />
+		<groups>
+			<run>
+				<!-- <include name="firefox"></include> -->
+				<include name=".*.login" />
+				<exclude name="firefox.logout" />
+			</run>
+		</groups>
+
+		<packages>
+			<package name="by.htp.tstng.simple" />
+		</packages>
+
+		<!-- <classes> <class name="by.htp.tstng.simple.SimpleTestExample" /> <class 
+			name="by.htp.tstng.simple.ComplexTestExample" /> </classes> -->
+	</test>
+</suite>
